@@ -53,7 +53,6 @@ A Flask-based web application for detecting cracks in images, processing them us
 
 ## Image Processing
 - Preprocessing: Image blurring, edge detection, and morphological transformations are applied to detect cracks.
-- Stages of processing are saved under the `/static/outputs/` folder.
 
 ## Database
 - Crack details and image metadata (such as processing date and image ID) are stored in PostgreSQL.
