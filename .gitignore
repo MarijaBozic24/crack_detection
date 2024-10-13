@@ -1,0 +1,28 @@
+# Python cache
+__pycache__/
+*.pyc
+*.pyo
+*.pyd
+
+# Virtual environment
+venv/
+env/
+.env/
+
+# Database files
+*.db
+*.sqlite
+
+# Output directories
+outputs/
+
+# IDE or Editor specific files
+.vscode/
+.idea/
+
+# Log files
+*.log
+
+# Other temporary files
+.DS_Store
+.pytest_cache/
