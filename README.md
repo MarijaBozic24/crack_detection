@@ -33,19 +33,45 @@ A Flask-based web application for detecting cracks in images, processing them us
     ```bash
     DB_USER=your_db_user
     DB_PASSWORD=your_db_password
+    DB_HOST=your_db_host
+    DB_PORT=your_db_port
+    DB_NAME=your_db_name
     ```
 
-4. Initialize the database:
+4. Run the application:
     ```bash
-    flask db init
-    flask db migrate
-    flask db upgrade
+    python main.py
     ```
+## Database Setup
 
-5. Run the application:
-    ```bash
-    flask run
-    ```
+To set up the PostgreSQL database for this project, follow the steps below:
+
+### 1. Install PostgreSQL
+Ensure that PostgreSQL is installed and running on your machine. If it's not installed, you can download it from the [official PostgreSQL website](https://www.postgresql.org/download/).
+
+### 2. Create a Database
+Once PostgreSQL is installed, create a new database that will be used for this project.
+
+You can create the database by running the following commands in your PostgreSQL terminal:
+
+```bash
+psql -U postgres
+```
+Once inside the PostgreSQL shell, execute the command to create the database:
+```sql
+CREATE DATABASE your_database_name;
+```
+### 3. Set Up the Database Schema
+The project comes with a schema.sql file that contains all necessary table definitions. To execute the SQL schema and set up your database:
+1. Connect to the newly created database:
+   ```bash
+   psql -U postgres -d your_database_name
+   ```
+2. Run the SQL commands in schema.sql to set up your tables. You can use the following command to load the file:
+   ```bash
+   \i path/to/schema.sql
+   ```
+Replace path/to/schema.sql with the actual path to your schema.sql file.
 
 ## Directory Structure
 - `/app`: Contains the core Flask application code
@@ -53,7 +79,6 @@ A Flask-based web application for detecting cracks in images, processing them us
 
 ## Image Processing
 - Preprocessing: Image blurring, edge detection, and morphological transformations are applied to detect cracks.
-- Stages of processing are saved under the `/static/outputs/` folder.
 
 ## Database
 - Crack details and image metadata (such as processing date and image ID) are stored in PostgreSQL.
