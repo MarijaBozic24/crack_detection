@@ -80,9 +80,4 @@ Replace path/to/schema.sql with the actual path to your schema.sql file.
 ## Image Processing
 - Preprocessing: Image blurring, edge detection, and morphological transformations are applied to detect cracks.
 
-## Database
-- Crack details and image metadata (such as processing date and image ID) are stored in PostgreSQL.
 
-
-## License
-This project is licensed under the MIT License.
